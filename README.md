@@ -11,3 +11,5 @@ This project is a client-server application for public key storage and message v
 
 - **Generate Keys:** `npm run generate-keys`
 - **Submit Public Key:** `npm run submit-key "backend-server-url" "your-password"`
+- **Sign Message:** `npm run sign-message "your-message"`
+- **Verify Signature:** `npm run verify "backend-server-url" "your-password" "your-message"`
