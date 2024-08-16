@@ -1,0 +1,16 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Client-side code for public key storage and message verification.",
+  "main": "client.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "generate-keys": "node client.js generate-keys",
+    "submit-key": "node client.js submit-key"
+  },
+  "dependencies": {
+    "axios": "^1.7.4"
+  }
+}
