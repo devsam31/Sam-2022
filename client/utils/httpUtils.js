@@ -8,4 +8,9 @@ async function submitPublicKey(serverUrl, password) {
     console.log(response.data);
 }
 
-module.exports = { submitPublicKey };
+async function submitForVerification(serverUrl, message, signature) {
+    const response = await axios.post(`${serverUrl}/verify`, { message, signature });
+    console.log(response.data);
+}
+
+module.exports = { submitPublicKey, submitForVerification };

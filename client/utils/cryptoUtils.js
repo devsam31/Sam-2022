@@ -11,4 +11,15 @@ function generateKeyPair() {
     console.log('Key pair generated and saved.');
 }
 
-module.exports = { generateKeyPair };
+function signMessage(message) {
+    const privateKey = fs.readFileSync(path.join(__dirname, '../keys/private.key'), 'utf8');
+    const sign = crypto.createSign('SHA256');
+    sign.update(message);
+    sign.end();
+    const signature = sign.sign(privateKey, 'hex');
+    console.log('Message:', message);
+    console.log('Signature:', signature);
+    return { message, signature };
+}
+
+module.exports = { generateKeyPair, signMessage };

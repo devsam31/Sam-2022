@@ -8,7 +8,9 @@
   },
   "scripts": {
     "generate-keys": "node client.js generate-keys",
-    "submit-key": "node client.js submit-key"
+    "submit-key": "node client.js submit-key",
+    "sign-message": "node client.js sign-message",
+    "verify": "node client.js verify"
   },
   "dependencies": {
     "axios": "^1.7.4"
